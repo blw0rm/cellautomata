@@ -93,6 +93,7 @@ class CA(object):
 def main(*args):
     if len(args) != 4:
         print "Usage: ca.py <initial data> <neighbourhood bits> <rules set> <iterations>"
+        print "Example: ca.py 1099511627776 3 90 40"
         sys.exit(2)
     args = map(int, args)
     ca = CA(*args[:3])
