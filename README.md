@@ -3,7 +3,7 @@ Cellular Automata
 
 This is an example implementation of cellular automaton algorithm.
 It's short description can be found at [The Mendicant Bug](http://mendicantbug.com/2007/10/28/simple-cellular-automata/ "The Mendicant Bug").
-More information about algorithm can be found at [Wikipedia] (http://en.wikipedia.org/wiki/Cellular_automaton "Wikipedia").
+For more information about algorithm see [Wikipedia] (http://en.wikipedia.org/wiki/Cellular_automaton "Wikipedia").
 
 Usage:
 
