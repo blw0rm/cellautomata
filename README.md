@@ -11,7 +11,7 @@ $ ca.py <initial data> <neighbourhood bits> <rules set>
 
 Assumptions:
 1. nbits - bits number per neighborhood, i.e. 3;
-2. data - Initial data which is a number, exponent of two;
+2. data - Initial data which is a number, exponent of two, i.e 1099511627776 (0x10000000000);
 3. ruleset - Rules set, 8 bit, i.e. 90;
 4. iterations - Recommended number of iterations, i.e. 40;
 
