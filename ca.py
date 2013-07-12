@@ -58,3 +58,17 @@ class CA(object):
             return high << shift | low
 
         return row >> index - 1 & 2**self.nbits - 1
+
+    def process_data(self, row):
+        """Processes whole the row, prints and returns it"""
+        result = 0
+        print_result = ""
+        for i in xrange(self.get_ca_size()):
+            processed_cell = self.apply_rule(self.get_ng(row, i))
+            result = result | processed_cell
+            if i < self.get_ca_size() - 1:
+                result <<= 1
+            print_result += str(processed_cell)
+
+        print print_result
+        return result
