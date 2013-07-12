@@ -40,3 +40,21 @@ class CA(object):
         Applies appropriate rule to the neighbour group.
         """
         return int(bool(self.ruleset & 2**ng))
+
+    def get_ng(self, row, index):
+        """Returns neighbours group by the index"""
+        num_neighbours = (self.nbits - 1) / 2
+        row_size = int(self.get_ca_size())
+        if index in (0, row_size - 1):
+            if index == 0:
+                shift = num_neighbours
+                base = self.nbits - num_neighbours
+            elif index == row_size - 1:
+                shift = self.nbits - num_neighbours
+                base = num_neighbours
+
+            high = row & (2**base - 1)
+            low = row >> (row_size - shift)
+            return high << shift | low
+
+        return row >> index - 1 & 2**self.nbits - 1
