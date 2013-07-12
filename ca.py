@@ -1,4 +1,4 @@
-#!/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 """
@@ -19,6 +19,7 @@ __version__ = "1.0"
 __maintainer__ = "Yaroslav Dashivets"
 __email__ = "yaroslav.dashivets@gmail.com"
 __status__ = "Prototype"
+
 
 class CA(object):
     def __init__(self, data, nbits, ruleset):
@@ -87,3 +88,15 @@ class CA(object):
         while iterations:
             row = self.process_data(row)
             iterations -= 1
+
+
+def main(*args):
+    if len(args) != 4:
+        print "Usage: ca.py <initial data> <neighbourhood bits> <rules set> <iterations>"
+        sys.exit(2)
+    args = map(int, args)
+    ca = CA(*args[:3])
+    ca.iterate(args[3])
+
+if __name__ == "__main__":
+    main(*sys.argv[1:])
