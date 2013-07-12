@@ -8,7 +8,7 @@ For more information about algorithm see [Wikipedia] (http://en.wikipedia.org/wi
 Usage:
 
     $ chmod +x ca.py
-    $ ca.py <initial data> <neighbourhood bits> <rules set>
+    $ ca.py <initial data> <neighbourhood bits> <rules set> <iterations>
 
 Assumptions:
 
