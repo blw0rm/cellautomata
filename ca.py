@@ -72,3 +72,10 @@ class CA(object):
 
         print print_result
         return result
+
+    def iterate(self, iterations):
+        """Iterates n times"""
+        row = self.data
+        bin_row = bin(row)[2:]
+        for i in xrange(iterations):
+            row = self.process_data(row)
